@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  color: rgb(32, 131, 121);
+  gap: 25px;
 }
 
 .App-logo {

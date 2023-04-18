@@ -1,0 +1,56 @@
+.input-container {
+  position: relative;
+}
+
+input {
+  height: 48px;
+  width: 500px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 2px solid rgb(32, 131, 121);
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+input,
+label .text {
+  font-size: 16px;
+}
+
+input:focus + label .text,
+/* for making the label stay at top when there is any text written */
+:not(input[value=""]) + label .text {
+  font-size: 12px;
+  transform: translate(0, -160%);
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.label .text {
+  transition: all 0.15s ease-out;
+}
+
+.filled {
+  border: none;
+  border-bottom: 1px solid rgb(32, 131, 121);
+  background-color: #ede9e9;
+  border-radius: 4px 4px 0 0;
+}
+
+.empty {
+  border: none;
+  border-bottom: 1px solid rgb(32, 131, 121);
+  border-radius: 0;
+}
